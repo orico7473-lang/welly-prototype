@@ -29,7 +29,7 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_LHdMoxK3ExSYIHiD6RKL_Q_SAIOkPvp
           VITE_CALENDLY_URL: https://calendly.com/wellydebest
           VITE_EMAIL_CODES_READY: 'true'
-          VITE_GOOGLE_AUTH_READY: 'false'
+          VITE_GOOGLE_AUTH_READY: 'true'
           VITE_PHONE_AUTH_READY: 'false'
       - name: Record build version
         run: printf '%s\n' "$GITHUB_SHA" > dist/build-version.txt
