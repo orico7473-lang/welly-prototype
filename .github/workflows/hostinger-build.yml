@@ -31,6 +31,8 @@ jobs:
           VITE_EMAIL_CODES_READY: 'false'
           VITE_GOOGLE_AUTH_READY: 'false'
           VITE_PHONE_AUTH_READY: 'false'
+      - name: Record build version
+        run: printf '%s\n' "$GITHUB_SHA" > dist/build-version.txt
       - name: Add page routing
         run: |
           cat > dist/.htaccess <<'EOF'
