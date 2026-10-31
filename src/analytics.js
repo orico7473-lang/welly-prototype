@@ -29,7 +29,6 @@ function flush() {
 function ensureSDK() {
   if (!allowed()) return;
   if (initialized) {
-    window.mixpanel?.opt_in_tracking();
     flush();
     return;
   }
