@@ -40,6 +40,7 @@ jobs:
           RewriteEngine On
           RewriteBase /
           RewriteRule ^index\.html$ - [L]
+          RewriteRule ^(services|gallery)/?$ /index.html [L]
           RewriteCond %{REQUEST_FILENAME} !-f
           RewriteCond %{REQUEST_FILENAME} !-d
           RewriteRule . /index.html [L]
@@ -56,3 +57,4 @@ jobs:
           git add -A
           git commit -m "Build from ${GITHUB_SHA}"
           git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push --force https://github.com/${GITHUB_REPOSITORY}.git HEAD:refs/heads/hostinger-published
+
