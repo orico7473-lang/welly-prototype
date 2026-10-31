@@ -66,3 +66,29 @@ main{animation:pageEnter .6s ease both}body.page-exiting main,body.page-exiting 
 .review-form .button{margin-top:8px}
 @media(max-width:650px){.review-form{padding:22px 18px;border-radius:18px}.review-form label,.account-form label{margin:17px 0}}
 
+
+
+/* Preserve the original colors of WELLY DE BEST photographs.
+   Keep the silver/black interface and cinematic movement unchanged. */
+.hero-new .hero-image-frame img,
+.story-image img,
+.work-tile img,
+.editorial-img img,
+.selected-grid img,
+.service-image img,
+.gallery-item img,
+.gallery-item:hover img,
+.lightbox img,
+.review-grid img,
+.review-media img {
+  filter: none !important;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+.hero-new .hero-image-shade {
+  background: linear-gradient(90deg,rgba(5,5,7,.58),rgba(5,5,7,.16) 58%,transparent 100%),
+              linear-gradient(0deg,rgba(5,5,7,.52),transparent 35%);
+}
+.page-hero-image {
+  background-blend-mode: normal;
+}
